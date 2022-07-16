@@ -5,6 +5,7 @@ describe('cy.handsOn(".selectFile")', () => {
     cy.get('input[type="file"]')
       .selectFile('cypress/fixtures/example.json')
       .then(input => {
+        console.log(input)
         expect(input[0].files[0].name).to.equal('example.json')
       })
   })
